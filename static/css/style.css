@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#e0e5ec;
+    min-height:100vh;
+    padding:40px;
+}
+
+.container{
+    max-width:750px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:35px;
+    color:#4b5563;
+    font-weight:700;
+}
+
+#message{
+    display:none;
+    margin-bottom:20px;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+.success{
+    display:block;
+    background:#d4edda;
+    color:#155724;
+}
+
+.error{
+    display:block;
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.user-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:22px;
+    padding:22px 25px;
+    border-radius:22px;
+    background:#e0e5ec;
+    box-shadow:
+        8px 8px 18px #bec3c9,
+        -8px -8px 18px #ffffff;
+    transition:.25s;
+}
+
+.user-card:hover{
+    transform:translateY(-3px);
+}
+
+.user-name{
+    font-size:20px;
+    font-weight:700;
+    color:#374151;
+}
+
+.status{
+    margin-top:8px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.available{
+    color:#16a34a;
+}
+
+.unavailable{
+    color:#dc2626;
+}
+
+/* Toggle Switch */
+
+.switch{
+    appearance:none;
+    -webkit-appearance:none;
+    width:65px;
+    height:34px;
+    border-radius:40px;
+    cursor:pointer;
+    position:relative;
+    background:#e0e5ec;
+
+    box-shadow:
+        inset 4px 4px 8px #bec3c9,
+        inset -4px -4px 8px #ffffff;
+
+    transition:.3s;
+}
+
+.switch::before{
+    content:"";
+    position:absolute;
+    width:26px;
+    height:26px;
+    top:4px;
+    left:4px;
+    border-radius:50%;
+    background:#e0e5ec;
+
+    box-shadow:
+        4px 4px 8px #bec3c9,
+        -4px -4px 8px #ffffff;
+
+    transition:.3s;
+}
+
+.switch:checked{
+    background:#8ec5fc;
+}
+
+.switch:checked::before{
+    left:35px;
+}
+
+@media(max-width:600px){
+
+    .user-card{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+}
